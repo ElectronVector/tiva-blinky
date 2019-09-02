@@ -6,5 +6,10 @@ pipeline {
                 sh 'ceedling test:all'
             }
         }
+        stage('Target Build') {
+            steps {
+                sh 'ceedling release'
+            }
+        }
     }
 }
