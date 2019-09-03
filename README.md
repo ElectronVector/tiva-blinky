@@ -14,6 +14,6 @@ Execute all unit tests with `ceedling test:all`.
 
 Run a single test with `ceedling test:<module>`, e.g. `ceedling test:led`.
 
-Load the app on the board with: `ceedling load`.
+Build the application for the target with: `ceedling release`.
 
-The load command also builds the application if necessary. Just build the application with: `ceedling release`.
+Load the app on the board with: `ceedling load`. The load command also builds the application if necessary. 
