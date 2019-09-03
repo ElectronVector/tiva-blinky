@@ -16,4 +16,4 @@ Run a single test with `ceedling test:<module>`, e.g. `ceedling test:led`.
 
 Build the application for the target with: `ceedling release`.
 
-Load the app on the board with: `ceedling load`. The load command also builds the application if necessary. 
+Load the app on the board with: `ceedling load`. The load command also builds the application if necessary.
