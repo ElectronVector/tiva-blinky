@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y ruby gcc curl make
+RUN apt-get update && apt-get install -y ruby gcc curl make cppcheck
 RUN gem install ceedling
 
 # Install the GCC ARM embedded toolchain.
