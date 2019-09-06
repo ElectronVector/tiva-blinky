@@ -16,11 +16,12 @@ pipeline {
         }
         stage('Target Build') {
             steps {
-                sh 'ceedling release'
+                sh 'rake release_bin'
             }
             post {
                 always {
                     archiveArtifacts artifacts: 'build/release/project.axf'
+                    archiveArtifacts artifacts: 'build/release/project.bin'
                 }
             }
         }

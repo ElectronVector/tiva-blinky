@@ -10,6 +10,9 @@ task :default => %w[ test:all release ]
 # The release build requires driverlib to be built first.
 task :release => "#{driverlib}"
 
+desc "A release task that also creates the bin file"
+task :release_bin => [:release, "#{PROJECT_BUILD_ROOT}/release/project.bin"]
+
 file "#{PROJECT_BUILD_ROOT}/release/project.bin" => :release do |task|
     puts "Creating #{File.basename(task.name)}..."
     sh "arm-none-eabi-objcopy -O binary #{PROJECT_BUILD_ROOT}/release/#{RELEASE_BUILD_OUTPUT} #{task.name}"
