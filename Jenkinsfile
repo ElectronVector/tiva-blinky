@@ -18,6 +18,11 @@ pipeline {
             steps {
                 sh 'ceedling release'
             }
+            post {
+                always {
+                    archiveArtifacts artifacts: 'build/release/project.axf'
+                }
+            }
         }
     }
 }
